@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+   <title>Впрокрастинации</title>
+   <meta charset="utf-8">
+   <style>
+     textarea, button, input, label {
+       display: block;
+       margin-top: 10px;
+     }
+   </style>
+ </head>
+ <body>
+   <header>
+     <h1>
+       Впрокрастинации
+     </h1>
+     <img src="https://avatanplus.com/files/resources/mid/56743fafbf617151b618c6a8.png" alt="logo"/>
+   </header>
+   <a class="toFeed" href="./feed.html" title="Вернуться на ленту">Неа... я передумал(-а)</a>
+   <h3>
+   Создание новой записи
+   </h3>
+   <form method="post" enctype="multipart/form-data" action="./feed.html">
+     <textarea name="text" cols="50" rows="5" placeholder="текст поста"></textarea>
+     <textarea name="tags" cols="50" rows="2" placeholder="хештеги"></textarea>
+     <label for="profile_pic">Выбрать файл для загрузки</label>
+     <input type="file" id="post_file" name="post_file"
+          accept=".jpg, .jpeg, .png, .mp4">
+     <button type="submit">
+       Готово
+     </button>
+   </form>
+ </body> 
+</html>

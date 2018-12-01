@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+   <title>Впрокрастинации</title>
+   <meta charset="utf-8">
+ </head>
+ <body>
+   <header>
+     <h1 style="font-family: cursive;">
+       Впрокрастинации
+     </h1>
+     <img src="https://avatanplus.com/files/resources/mid/56743fafbf617151b618c6a8.png" alt="logo"/>
+   </header>
+   <p>Вход для зарегистрированных пользователей</p>
+   <form class="entrance" action="./feed.html" method="post">
+     <input type="email" name="email" placeholder="ivanov@mail.by" required>
+     <br>
+     <input type="password" name="password" placeholder="пароль" required>
+     <br>
+     <button type="submit" formenctype="multipart/form-data">
+       Войти
+     </button>
+   </form>
+   <p>Регистрация</p>
+   <form class="register" action="./feed.html" method="post" formenctype="multipart/form-data">
+     <input type="name" name="name" placeholder="ник" required>
+     <br>
+     <input type="email" name="email" placeholder="ivanov@mail.by" required>
+     <br>
+     <input type="password" name="password" placeholder="пароль" required>
+     <br>
+     <input type="password" name="password" placeholder="подтверждение пароля" required>
+     <br>
+     <input type="checkbox" name="agreement" id="agreement" required>
+     <label for="agreement">Согласен(-на) с порядком обработки персональных данных</label>
+     <br>
+     <button type="submit">
+       Зарегистрироваться
+     </button>
+   </form>
+ </body> 
+</html>
