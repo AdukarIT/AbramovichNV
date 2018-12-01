@@ -22,8 +22,8 @@
      </button>
    </form>
    <p>Регистрация</p>
-   <form class="register" action="./feed.html" method="post" formenctype="multipart/form-data">
-     <input type="name" name="name" placeholder="ник" required>
+   <form class="register" action="./feed.html" method="post">
+     <input type="text" name="name" placeholder="ник" required>
      <br>
      <input type="email" name="email" placeholder="ivanov@mail.by" required>
      <br>
@@ -34,7 +34,7 @@
      <input type="checkbox" name="agreement" id="agreement" required>
      <label for="agreement">Согласен(-на) с порядком обработки персональных данных</label>
      <br>
-     <button type="submit">
+     <button type="submit" formenctype="multipart/form-data">
        Зарегистрироваться
      </button>
    </form>
