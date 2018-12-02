@@ -1,0 +1,64 @@
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    height: 400px;
+    max-width: 1200px;
+  }
+  
+  .tile {
+    position: relative;
+    box-sizing: border-box;
+    padding: 35px;
+    width: 25%;
+    background-repeat: no-repeat;
+    flex: 100%;
+  }
+  
+  .item_img_span {
+    position: absolute;
+    bottom: 20px;
+    left: 25%;
+  }
+  
+  .item_title, .item_description {
+    display: block;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+  }
+  
+  .item_title{
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .item_image {
+    position: relative;
+    top: 40%;
+    max-width: 70%;
+    max-height: 50%;
+  }
+  
+  .small {
+    flex: 50%;
+  }
+  
+  .tile_blue {
+    background-color:  lightblue;
+    }
+  .tile_gold {
+    background-color:  gold;
+  }
+  .tile_purple {
+    background-color:  purple;
+  }
+  .tile_green {
+    background-color:  seagreen;
+  }
+  .tile_red {
+    background-color:  tomato;
+  }
+  .tile_plum {
+    background-color:  plum;
+  }
+  
