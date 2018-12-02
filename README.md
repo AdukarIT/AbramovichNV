@@ -16,3 +16,7 @@
 
 [Задание 1](https://github.com/AdukarIT/AbramovichNV/tree/master/homework5_1)
 [Задание 2](https://github.com/AdukarIT/AbramovichNV/tree/master/homework5_2)
+
+### Практика к уроку 12
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/lesson15)
