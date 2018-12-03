@@ -20,3 +20,7 @@
 ### Практика к уроку 12
 
 [Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/lesson15)
+
+### Домашнее задание к уроку 8
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework8)
