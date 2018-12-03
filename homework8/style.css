@@ -1,0 +1,116 @@
+body {
+  min-width: 300px;
+  font-family: sans-serif;
+  position: relative;
+}
+
+header {
+  height: 50px;
+  font: italic small-caps bolder condensed 30px cursive;
+  border: 5px double darkred;
+  border-radius: 15px;
+}
+
+header img {
+  height: 100%;
+}
+
+.header {
+  float: right;
+  font-weight: 700;
+  margin-right: 20px;
+  color: brown;
+}
+
+nav {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+form, address {
+  margin-left: 40px;
+}
+
+li {
+  list-style: none;
+}
+
+.submenu li {
+  padding: 5px;
+}
+
+.menu {
+  width: 250px;
+}
+
+div.category, .menu > li:last-of-type {
+  min-height: 20px;
+  padding: 15px 15px;
+  background-color: rgba(128, 0, 0, 0.5);
+}
+
+.submenu {
+  display: none;
+  padding: 0;
+}
+
+div.category:hover ~ .submenu, ul.submenu:hover {
+  display: block;
+  background-color: rgba(128, 0, 0, 0.65);
+}
+
+.submenu li:hover {
+  background-color: rgba(128, 0, 0, 0.8);
+}
+
+.submenu li:hover a {
+  color: ivory;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.submenu li a {
+  margin-left: 20px;
+}
+
+#ourAddress {
+  display: none;
+}
+
+.map {
+  display: none;
+}
+
+#ourAddress:checked ~ .map{
+  display: block;
+}
+
+input[name=clientAddress] {
+  display: none;
+}
+
+#delivery:checked ~ input[name=clientAddress] {
+  display: block;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  padding: 5px;
+  min-width: 200px;
+  margin-bottom: 10px;
+}
+
+div.radio {
+  margin-bottom: 10px;
+}
+
+label a {
+  display: inline-block;
+}
+
+button[type="submit"] {
+  margin: 10px 0;
+}

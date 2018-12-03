@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+   <title>Интернет-магазин "Циклоп"</title>
+   <meta charset="utf-8">
+   <script>
+   	function agreeForm(f) {
+    	f.submit.disabled = !f.agreement.checked;
+   	}
+   </script>
+   <link href ="style.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header><img src="https://cheat-off.com/uploads/posts/2014-08/1409468079_monster-busters-vzlom.png"><span class="header">Циклоп</span></header>
+  <nav>
+    <ul class="menu">
+      <li><div class="category">Бытовая техника</div>
+        <ul class="submenu">
+          <li><a href="#">Стиральные машины</a></li>
+          <li><a href="#">Пылесосы</a></li>
+          <li><a href="#">Швейные, вышивальные машины</a></li>
+          <li><a href="#">Утюги</a></li>
+          <li><a href="#">Электровеники</a></li>
+          <li><a href="#">Сушилки для обуви</a></li>
+        </ul>
+      </li>
+      <li><div class="category">Техника для кухни</div>
+        <ul class="submenu">
+          <li><a href="#">Холодильники</a></li>
+          <li><a href="#">Кухонные плиты</a></li>
+          <li><a href="#">Морозильники</a></li>
+          <li><a href="#">Настольные плиты</a></li>
+          <li><a href="#">Ростеры, мини-печи</a></li>
+          <li><a href="#">Вытяжки</a></li>
+          <li><a href="#">Микроволновые печи</a></li>
+          <li><a href="#">Скатерти-самобранки</a></li>
+        </ul>
+      </li>
+      <li><div class="category">Компьютерная техника</div>
+        <ul class="submenu">
+          <li><a href="#">Ноутбуки</a></li>
+          <li><a href="#">Планшеты</a></li>
+          <li><a href="#">Компьютеры, моноблоки</a></li>
+          <li><a href="#">Игровые приставки</a></li>
+          <li><a href="#">Серверное оборудование</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Корзина</a></li>
+    </ul>
+  </nav>
+  <form class="order" action="" method="post">
+    <h3>Форма заказа</h3>
+    <input type="text" name="firstName" placeholder="имя" required><br>
+    <input type="text" name="secondName" placeholder="фамилия" required><br>
+    <input type="password" name="password" placeholder="пароль" required><br>
+    <input type="email" name="email" placeholder="ivanov@mail.by" required><br>
+    <div class="radio">
+      <div>
+        <input id="self-reference" type="radio" name="orderDelivery" value="self-reference" checked>
+        <input id="ourAddress" type="checkbox" name="ourAddress">
+        <label for="self-reference">Самовывоз со склада по адресу </label><label for="ourAddress" title="Кликни, чтобы увидеть, как проехать">ул.Обойная,12</label>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1175.2218462491542!2d27.543977287052964!3d53.90609111481232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfeda0fecf81%3A0xce4b3b5e1b0d9415!2z0KHQsNC70L7QvSDQutGA0LDRgdC-0YLRiyDQuCDRgtCw0YLRgyDQrdC60YHQutC70Y7Qt9C40LI!5e0!3m2!1sru!2sby!4v1543865365172" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div>
+        <input id="delivery" type="radio" name="orderDelivery" value="delivery">
+        <label for="delivery">Курьером по Минску</label><br>
+        <input type="text" name="clientAddress" placeholder="адрес">
+      </div>
+    </div>
+    <label for="comment">Комментарий к заказу</label><br>
+    <textarea id="comment" name="comment" cols="50" rows="3"></textarea><br>
+    <input type="checkbox" name="agreement" id="agreement" onclick="agreeForm(this.form)">
+    <label for="agreement">Я прочитал и согласен с <a href="#">условиями доставки</a></label><br>
+    <button id="orderButton" name="submit" type="submit" formenctype="multipart/form-data" disabled>Подтвердить</button>
+  </form>
+  
+  <address id=contact>
+    <p>+777 77 7777772, Incognito str., 5, apt.07 (9:00 a.m. to 5:00 p.m., Monday to Friday), skype: skype</p>
+  </address>
+ </body> 
+</html>
