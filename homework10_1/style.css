@@ -1,0 +1,7 @@
+.main {
+  height: 100vh;
+  background-image: url(https://github.com/AdukarIT/_Tasks_/blob/master/assets/beach/sun.png?raw=true), url(https://github.com/AdukarIT/_Tasks_/blob/master/assets/beach/sea.jpg?raw=true), url(https://github.com/AdukarIT/_Tasks_/blob/master/assets/beach/sky.jpg?raw=true);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: 30%, contain, cover;
+  background-position: 90% 10%, bottom, 50%;
+}

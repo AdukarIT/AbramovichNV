@@ -1,0 +1,19 @@
+.custom-checkbox-default {
+    display: none;
+}
+
+.custom-checkbox-default:checked ~ .flaticon-correct {
+    display: inline-block;
+}
+
+.custom-checkbox-default:checked ~ .flaticon-oval {
+    display: none;
+}
+
+.custom-checkbox-default:not(:checked) ~ .flaticon-correct {
+    display: none;
+}
+
+.custom-checkbox-default:not(:checked) ~ .flaticon-oval {
+    display: inline-block;
+}
