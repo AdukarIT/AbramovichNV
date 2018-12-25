@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <title>Социальная сеть "Солнышко"</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="header">
+      <a class="header__logo" href="#"><img class="header__logo_img" src="https://cdn4.iconfinder.com/data/icons/weather-29/256/sun-512.png" alt="logo"></a>
+      <form class="search__form" action="search" method="get">
+        <span class="search__icon"><i class="fa fa-search"></i></span>
+        <input class="search__input" type="text" placeholder="Поиск">
+      </form>
+      <input id="header__checkbox-notification" class="header__checkbox-notification" type="checkbox" />
+      <label for="header__checkbox-notification" class="header__checkbox-notification_label">
+       <span class="header__checkbox-notification_icon"><i class="fa fa-bell"></i></span>
+     </label>
+      <input id="header__checkbox-music" class="header__checkbox-music" type="checkbox" />
+      <label for="header__checkbox-music" class="header__checkbox-music_label">
+       <span class="header__checkbox-music_icon"><i class="fa fa-music"></i></span>
+     </label>
+      <input id="header__checkbox-user" class="header__checkbox-user" type="checkbox" />
+      <label for="header__checkbox-user" class="header__checkbox-user_label">
+       <span class="header__checkbox-username">Username</span>
+       <span class="header__checkbox-usericon"><i class="fa fa-user"></i></span>
+       <span class="header__checkbox-arrow"><i class="fa fa-angle-down"></i></span>
+     </label>
+    </header>
+    <div class="main">
+      <nav class="navigation">
+        <a class="navigation__item" href=""><i class="fa fa-home"></i><span>Моя страница</span></a>
+        <a class="navigation__item" href=""><i class="fa fa-file-text-o"></i><span>Новости</span></a>
+        <a class="navigation__item" href=""><i class="fa fa-comments-o"></i><span>Сообщения</span></a>
+        <a class="navigation__item" href=""><i class="fa fa-users"></i><span>Друзья</span></a>
+        <a class="navigation__item" href=""><i class="fa fa-home"></i><span>Группы</span></a>
+        <a class="navigation__item" href=""><i class="fa fa-camera"></i><span>Фотографии</span></a>
+        <a class="navigation__item" href=""><i class="fa fa-music"></i><span>Музыка</span></a>
+        <a class="navigation__item" href=""><i class="fa fa-film"></i><span>Видео</span></a>
+        <a class="navigation__item" href=""><i class="fa fa-gamepad"></i><span>Игры</span></a>
+        <hr>
+        <a class="navigation__item" href=""><i class="fa fa-credit-card"></i><span>Sunny Pay</span></a>
+        <hr>
+        <a class="navigation__item" href=""><i class="fa fa-shopping-cart"></i><span>Товары</span></a>
+        <a class="navigation__item" href=""><i class="fa fa-star"></i><span>Закладки</span></a>
+        <a class="navigation__item" href=""><i class="fa fa-file"></i><span>Документы</span></a>
+        <hr>
+        <a class="navigation__item" href=""><i class="fa fa-cubes"></i><span>Тесты для умных</span></a>
+        <hr>
+        <a class="navigation__contact-item" href="">Блог</a>
+        <a class="navigation__contact-item" href="">Разработчикам</a>
+        <a class="navigation__contact-item" href="">Реклама</a>
+        <a class="navigation__contact-item" href="">Ещё<i class="fa fa-angle-down"></i></a>
+      </nav>
+      
+      <section class="feed">
+        <div class="add">
+          <div class="addnote"><i class="fa fa-user"></i><span class="addnote__placeholder">Что у Вас нового?</span></div>
+        </div>
+        <div class="feed__item">
+          <div class="feed__item_source">
+            <a href="feed__item_sourcelink">
+              <img class="feed__item_source-icon" src="https://pp.userapi.com/c621927/v621927991/11421/jEfaPMIvnaE.jpg?ava=1" alt="sourceimg">
+              <div class="post_info">
+                <h5 class="post_info_name">История|History</h5>
+                <span class="post_info_time">час назад</span>
+              </div>
+            </a>
+            <i class="fa fa-angle-down"></i>
+          </div>
+          <div class="feed__item_content">
+          Ушки
+            <img src="http://alisa-foto.ho.ua/img/goods/365.jpg" alt="postimg">
+          </div>
+          <hr>
+          <i class="fa fa-heart-o feed__item_property" title="Нравится"><span> 11</span></i>
+          <i class="fa fa-share feed__item_property" title="Поделиться"><span> 11</span></i>
+          <i class="fa fa-eye feed__item_property" title="4234 просмотров"><span title="4234 просмотров"> 4k</span></i>
+        </div>
+      </section>
+      
+      <div class="feed-settings">
+        <div class="feed-menu">
+          <a class="feed-menu__item" href="">Новости</a>
+          <ul>
+            <li><a class="feed-menu__item" href="">Фотографии</a></li>
+            <li><a class="feed-menu__item" href="">Сообщества</a></li>
+            <li><a class="feed-menu__item" href="">Подкасты</a></li>
+          </ul>
+          <a class="feed-menu__item" href="">Рекомендации</a>
+          <a class="feed-menu__item" href="">Поиск</a>
+          <hr>
+          <a class="feed-menu__item" href="">Понравилось</a>
+          <a class="feed-menu__item" href="">Обновления</a>
+          <a class="feed-menu__item" href="">Комментарии</a>
+        </div>
+        <div class="feed-settings__checkbox">
+          <input id="feed-settings__checkbox_input" class="feed-settings__checkbox_input" type="checkbox" />
+          <label for="feed-settings__checkbox_input" class="feed-settings__checkbox_label"><img src="https://image.flaticon.com/icons/svg/426/426833.svg" alt="fire"><span>Самые интересные</span><span class="feed-settings__checkbox_toggle"></span></label>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

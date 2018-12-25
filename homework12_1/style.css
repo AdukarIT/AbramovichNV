@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+.header {
+  background: url(http://snim.net/wp-content/uploads/2015/05/одуванчики.jpg) center;
+  background-size: cover;
+  height: 500px;
+  min-width: 400px;
+  text-align: center;
+}
+
+.main {
+  display: table;
+  width: 100%;
+  min-height: 100px;
+}
+
+.main__left, .main__center, .main__right {
+  display: table-cell;
+  box-sizing: content;
+  padding: 20px auto;
+  vertical-align: middle;
+}
+
+.main__left, .main__right {
+  min-width: 280px;
+}
+
+.main__center {
+  width: 100%;
+}
+
+.main__left_logo {
+  font-weight: 600;  
+}
+
+.link {
+  margin: 0 10px 0;
+  transition: all 0.2s;
+}
+
+.link:hover {
+  border-bottom: 1px solid;
+}
+
+.main__right_social_links {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.main__right_social_links a svg {
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.main__right_social_links a:hover svg {
+  background-color: #ddd;
+}
+
+.main__checkbox-default, .main__checkbox {
+  display: none;
+  cursor: pointer;
+}
+    
+.course {
+  margin-top: 70px;
+}
+
+.course__title {
+  margin: auto 30px;
+}
+
+.course__item {
+  margin: 20px auto 20px;
+  display: block;
+  font-size: 1.3em;
+}
+
+.header__button {
+  display: block;
+  box-sizing: content;
+}
+
+.header__button_link {
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  color: #fff;
+  background: #f00;
+  font-weight: 700;
+}
+
+.header__button_link:hover {
+  background: #fff;
+  color: red;
+}
+
+.description {
+  display: flex;
+  flex-direction: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.description__img {
+   margin-right: 10px;
+   height: 50px;
+   vertical-align: middle;
+}
+
+  @media screen and (max-width: 720px) {
+    .header { height: 600px; }
+    .course { margin-top: 20px; }
+    .main__checkbox { display: block; position: absolute; top: 20px; right: 20px; }
+    .main__left { display: block; text-align: left; margin-left: 20px; margin-top: 20px;}
+    .main__center, .main__right { display: none; }
+    .main__checkbox-default:checked ~ .main__center, .main__checkbox-default:checked ~ .main__right { display: table-row; }
+    .description { flex-direction: column;}
+  }
+  
+  @media screen and (min-width: 1300px) {
+    .header { height: 500px; }
+    .course__title { font-size: 3em; }
+  }
