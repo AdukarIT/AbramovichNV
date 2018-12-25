@@ -31,3 +31,8 @@
 [Задание 2](https://github.com/AdukarIT/AbramovichNV/tree/master/homework10_2)
 [Задание 3](https://github.com/AdukarIT/AbramovichNV/tree/master/homework10_3)
 [Задание 4](https://github.com/AdukarIT/AbramovichNV/tree/master/homework10_4)
+
+### Домашнее задание к уроку 12
+
+[Задание 1](https://github.com/AdukarIT/AbramovichNV/tree/master/homework12_1)
+[Задание 2](https://github.com/AdukarIT/AbramovichNV/tree/master/homework12_2)
