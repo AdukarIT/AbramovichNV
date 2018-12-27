@@ -36,3 +36,9 @@
 
 [Задание 1](https://github.com/AdukarIT/AbramovichNV/tree/master/homework12_1)
 [Задание 2](https://github.com/AdukarIT/AbramovichNV/tree/master/homework12_2)
+
+### Домашнее задание к уроку 14
+
+[Задание 1](https://github.com/AdukarIT/AbramovichNV/tree/master/homework14_1)
+[Задание 2](https://github.com/AdukarIT/AbramovichNV/tree/master/homework14_2)
+[Задание 2](https://github.com/AdukarIT/AbramovichNV/tree/master/homework14_3)
