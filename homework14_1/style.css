@@ -1,0 +1,21 @@
+.block {
+  height: 100px;
+  width: 600px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.ball {
+  width: 75px;
+  position: absolute;
+  bottom: 0;
+  transition: all ease 5s;
+}
+
+.checkbox__input:checked ~ .ball {
+  transform: translateX(525px) rotate(270deg);
+}
+
+.checkbox__input {
+  display: none;
+}

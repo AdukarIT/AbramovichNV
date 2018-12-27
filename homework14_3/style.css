@@ -1,0 +1,10 @@
+.block {
+  width: 66px;
+  height: 135px;
+  background: url(http://www.mpbox.ru/assets/images/without-flash/gamedev/sheet.jpg);
+  transition: 0.3s steps(6);
+}
+
+.block:hover {
+  background-position: -396px 0;
+}

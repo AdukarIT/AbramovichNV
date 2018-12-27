@@ -1,0 +1,11 @@
+.block {
+  width: 222px;
+  height: 222px;
+  background: url(http://cdn.onlinewebfonts.com/svg/download_537071.png) no-repeat center;
+  background-size: 50%;
+  transition: 7s ease;
+}
+
+.block:hover {
+  transform: rotate(1080deg);
+}
