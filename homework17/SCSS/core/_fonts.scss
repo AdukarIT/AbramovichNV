@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+@import url('fonts/fontawesome/css/all.css');
+
+@font-face {
+  font-family: BankGothicBold;
+  src: url(fonts/BankGothicBold.ttf);
+}
+
+$font-title: "BankGothicBold";
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
