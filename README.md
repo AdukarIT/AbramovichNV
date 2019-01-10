@@ -42,3 +42,7 @@
 [Задание 1](https://github.com/AdukarIT/AbramovichNV/tree/master/homework14_1)
 [Задание 2](https://github.com/AdukarIT/AbramovichNV/tree/master/homework14_2)
 [Задание 3](https://github.com/AdukarIT/AbramovichNV/tree/master/homework14_3)
+
+### Домашнее задание к уроку 17
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework17)
