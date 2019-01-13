@@ -46,3 +46,7 @@
 ### Домашнее задание к уроку 17
 
 [Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework17)
+
+### Домашнее задание к уроку 19
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework19.md)
