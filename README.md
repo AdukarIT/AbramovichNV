@@ -50,3 +50,11 @@
 ### Домашнее задание к уроку 19
 
 [Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework19.md)
+
+### Домашнее задание и практика к уроку 20
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework20)
+
+### Домашнее задание к уроку 21
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework21)

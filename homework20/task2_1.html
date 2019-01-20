@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>logical operators in js</title>
+	<script>
+        var lastNumber = prompt("Введите x");
+        var isPrime;
+
+        for (var numb = 2; numb <= lastNumber; numb++) {
+            isPrime = true;
+            for (var i = 2; i < numb / 2 + 1; i++) {
+                if (numb % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) console.log(numb);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
