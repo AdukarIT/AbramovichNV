@@ -23,7 +23,7 @@ const factorial = (number) => {
 
 const reverseNumber = (number) => {
     if (number < 10) return number;
-    return +(`${number % 10}` + reverseNumber((number - (number % 10)) / 10));
+    return `${number % 10}` + reverseNumber((number - (number % 10)) / 10);
 }
 
 // Task 5
