@@ -58,3 +58,11 @@
 ### Домашнее задание к уроку 21
 
 [Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework21)
+
+### Домашнее задание к уроку 22
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework22)
+
+### Домашнее задание к уроку 23
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework23)
