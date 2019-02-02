@@ -66,3 +66,7 @@
 ### Домашнее задание к уроку 23
 
 [Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework23)
+
+### Домашнее задание к уроку 24
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework24)
