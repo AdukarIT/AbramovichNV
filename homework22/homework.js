@@ -7,15 +7,18 @@ const triangle = (leg1, leg2, hypotenuse) => {
 // 2 задача
 
 const repeat = (str = '', n = 2) => {
-    if (n == 0) return '';
-    return str + repeat(str, n - 1);
+    var result = '';
+    for (let i = 0; i < n; i++) {
+        result += `${str}`;
+    }
+    return result;
 }
 
 // 3 задача
 
 const room = (student, desk) => {
-    if (student == desk * 2) return 'все отлично';
-    return (student - desk * 2 > 0) ? `не хватает ${student - desk * 2} парт` : `лишних ${desk * 2 - student} парт`;
+    if (student == desk * 2 || student + 1 == desk * 2) return 'все отлично';
+    return (student - desk * 2 > 0) ? `не хватает ${Math.ceil(student / 2 - desk)} парт` : `лишних ${Math.floor(desk - student / 2)} парт`;
 }
 
 // 4 задача
@@ -24,15 +27,15 @@ const grading = (grade) => {
     if (grade <= 0 && grade > 10) return 'нет таких';
     switch (grade) {
         case 1:
-        case 2: return 'Unsatisfactory'; break;
+        case 2: return 'Unsatisfactory';
         case 3:
-        case 4: return 'Satisfactory'; break;
-        case 5: return 'Almost good'; break;
-        case 6: return 'Good'; break;
-        case 7: return 'Very good'; break;
-        case 8: return 'Almost excellent'; break;
-        case 9: return 'Excellent'; break;
-        case 10: return 'Brilliant'; break;
+        case 4: return 'Satisfactory';
+        case 5: return 'Almost good';
+        case 6: return 'Good';
+        case 7: return 'Very good';
+        case 8: return 'Almost excellent';
+        case 9: return 'Excellent';
+        case 10: return 'Brilliant';
     }
 }
 
@@ -41,7 +44,7 @@ const grading = (grade) => {
 const expectZero = () => {
     var isItZero;
     do {
-        isItZero = prompt('Введите число');
+        isItZero = +prompt('Введите число');
     } while (isItZero != 0)
     return;
 }
@@ -116,7 +119,7 @@ const findDivisorsFrom2To20 = () => {
     let amountDivisors = 0;
     for (let i = 2; i <= 20; i++) {
         divisors = findDivisors(i);
-        console.log(`Делители числа ${i}: ${divisors.toString()}`);
+        console.log(`Делители числа ${i}: ${divisors.join()}`);
         amountDivisors += divisors.length;
     }
     return amountDivisors;
@@ -131,7 +134,7 @@ const findDivisorsFromXToY = (x, y) => {
     let amountDivisors = 0;
     for (let i = x; i <= y; i++) {
         divisors = findDivisors(i);
-        console.log(`Делители числа ${i}: ${divisors.toString()}`);
+        console.log(`Делители числа ${i}: ${divisors.join()}`);
         amountDivisors += divisors.length;
     }
     return amountDivisors;
@@ -144,11 +147,11 @@ const convertToByte = (size, unit) => {
     unit = unit.toLowerCase();
     switch (unit) {
         case 'kb':
-        case 'кб': return 1024 * +size;
+        case 'кб': return 1024 * size;
         case 'mb':
-        case 'мб': return 1024 * 1024 * +size;
+        case 'мб': return 1024 * 1024 * size;
         case 'gb':
-        case 'гб': return 1024 * 1024 * 1024 * +size;
+        case 'гб': return 1024 * 1024 * 1024 * size;
         default: return `Проверьте исходные данные`;
     }
 }
@@ -188,9 +191,8 @@ const words = (n) => {
 
 const isItSumOfSquares = (n) => {
     if (n > 9 ** 2 + 9 ** 2 || n < 0 || Math.round(n) !== n) return false;
-    for (let i = 0; i <= 9; i++) {
-      if (Math.round(Math.sqrt(n - i ** 2)) == Math.sqrt(n - i ** 2)) return true;
+    for (let i = 0; i <= n - i ** 2; i++) {
+        if (Math.round(Math.sqrt(n - i ** 2)) == Math.sqrt(n - i ** 2)) return true;
     }
     return false;
-  }
-  
+}
