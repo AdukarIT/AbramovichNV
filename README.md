@@ -70,3 +70,7 @@
 ### Домашнее задание к уроку 24
 
 [Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework24)
+
+### Домашнее задание и практика к уроку 25
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework25)
