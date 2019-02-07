@@ -1,7 +1,7 @@
 // 1 задача
 
 const verify = (obj, key) => {
-    return obj[key] ? true : false;
+    return Object.keys(obj).includes(key);
 }
 
 // 2 задача
