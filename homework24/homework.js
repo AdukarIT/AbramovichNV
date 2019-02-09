@@ -1,8 +1,6 @@
 // 1 задача
 
-const verify = (obj, key) => {
-    return Object.keys(obj).includes(key);
-}
+const verify = (obj, key) => key in obj;
 
 // 2 задача
 
