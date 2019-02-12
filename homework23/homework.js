@@ -1,17 +1,17 @@
 // 1 задача
 
-const getRandomArray = (len) => new Array(len).fill(1).map(a => Math.random());
+const getRandomArray = len => new Array(len).fill(1).map(a => Math.random());
 
 // 2 задача
 
-const biggerThenMedium = (arr) => {
+const biggerThenMedium = arr => {
   var medium = arr.reduce((acc, element) => acc + element) / arr.length;
   console.log(arr.filter(element => element > medium).toString());
 }
 
 // 3 задача
 
-const searchSmallestArrayElement = (arr) => {
+const searchSmallestArrayElement = arr => {
   return arr.reduce((acc, element) => element < acc ? element : acc);
 }
 
@@ -23,9 +23,9 @@ const twoSmallestElement = () => {
 
 // 4 задача
 
-const filterShiftReplace = (arr) => {
+const filterShiftReplace = arr => {
   var newArr = arr.filter(e => e >= 0.3);
-  return newArr.concat(new Array(arr.length - newArr.length)).fill(0,newArr.length);
+  return newArr.concat(new Array(arr.length - newArr.length)).fill(0, newArr.length);
 }
 
 // 5 задача
@@ -40,7 +40,7 @@ const reverseSum = (arr1, arr2) => {
 
 // 6 задача
 
-const bubbleSort = (arr) => {
+const bubbleSort = arr => {
   let f;
   do {
     f = 0;
@@ -56,40 +56,32 @@ const bubbleSort = (arr) => {
 
 // 7 задача
 
-const sumPairNearOne = (arr) => {
-    let first;
-    let second;
-    do {
-      first = arr.shift();
-      second = arr.find(e => e > 0.999 - first && e < 1.001 - first);
-      if (second) console.log(first, second);
-    } while (arr.length > 1)
-  }
+const sumPairNearOne = arr => {
+  let arrInUse = arr.slice();
+  let first;
+  let second;
+  do {
+    first = arrInUse.shift();
+    second = arrInUse.find(e => e > 0.999 - first && e < 1.001 - first);
+    if (second) console.log(first, second);
+  } while (arrInUse.length > 1)
+}
 
 // 8 задача
 
-const replaceByOrder = (arr) => {
-    let index;
-    let subArr = arr.slice();
-    let newArr = new Array(arr.length);
-    console.log(arr)
-    for (let i = arr.length; i > 0; i--) {
-      index = subArr.indexOf(searchSmallestArrayElement(subArr))
-      newArr[index] = i;
-      subArr[index] = 1;
-    }
-    return newArr;
+const replaceByOrder = arr => {
+  let index;
+  let subArr = arr.slice();
+  let newArr = new Array(arr.length);
+  console.log(arr)
+  for (let i = arr.length; i > 0; i--) {
+    index = subArr.indexOf(searchSmallestArrayElement(subArr))
+    newArr[index] = i;
+    subArr[index] = 1;
   }
-  
+  return newArr;
+}
+
 // 9 задача
 
-const cycleShift = (arr,x) => {
-    let newArr = arr.slice();
-    let element;
-    for (let i = 0; i < x; i++) {
-      element = newArr.pop();
-      newArr.unshift(element);
-    }
-    return newArr;
-  }
-  
+const cycleShift = (arr, x) => arr.slice(-x).concat(arr.slice(0, arr.length - x));

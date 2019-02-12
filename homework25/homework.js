@@ -19,11 +19,11 @@ const rebuilderNumberArray = arr => {
   return arr.map(el => {
     let sqrt = Math.sqrt(el);
     return {
-    initial: el,
-    sqrt: sqrt,
-    roundSqrt: Math.round(sqrt * 100) / 100,
-    floor: (Math.floor(sqrt) === Math.round(sqrt)),
-    ceil: (Math.ceil(sqrt) === Math.round(sqrt))
+      initial: el,
+      sqrt: sqrt,
+      roundSqrt: Math.round(sqrt * 100) / 100,
+      floor: (Math.floor(sqrt) === Math.round(sqrt)),
+      ceil: (Math.ceil(sqrt) === Math.round(sqrt))
     }
   });
 }
@@ -31,11 +31,12 @@ const rebuilderNumberArray = arr => {
 // 3 задача
 
 const ifPolindrom = str => {
+  let strAct = str.split(' ').join('');
   let i = 0;
   do {
-    if (str[i] != str[str.length - 1 - i]) return false;
+    if (strAct[i] != strAct[strAct.length - 1 - i]) return false;
     i++;
-  } while (i < str.length / 2)
+  } while (i < strAct.length / 2)
   return true;
 }
 
@@ -75,8 +76,8 @@ const replaceToStars = str => {
       continue;
     } else if (!verified.includes(str[i])) {
       verified += str[i];
-      } else {
-        result = result.slice(0, i) + '*' + result.slice(i + 1);
+    } else {
+      result = result.slice(0, i) + '*' + result.slice(i + 1);
     }
   }
   return result;

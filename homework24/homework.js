@@ -29,7 +29,7 @@ const dishForOne = (dish) => {
 var cylinder = {
     radius: 5,
     height: 30,
-    getVolume: function () { return Math.round(Math.PI * (this.radius ** 2) * this.height) }
+    getVolume: function () { return Math.PI * (this.radius ** 2) * this.height }
 }
 
 // 4 задача
