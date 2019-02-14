@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+        const links = ['http://google.com', '/tutorial', 'local/path', 'ftp://ftp.com/my.zip', 'http://nodejs.org', 'http://internal.com/test']
+        var list = document.createElement('ul');
+        for (let i = 0; i < links.length; i++) {
+            var newPoint = document.createElement('li');
+            newPoint.innerHTML = `<a href = ${links[i]}>${links[i]}</a>`;
+                if (links[i].includes('http://')) newPoint.firstChild.setAttribute('style', 'color: red')
+            list.appendChild(newPoint);
+        }
+        const swapNodes = (first, second) => {
+            let box = first.cloneNode(1);
+            list.replaceChild(box,second);
+            list.replaceChild(second,first);
+        }
+        document.body.insertBefore(list, document.body.firstChild);
+
+        swapNodes(document.body.querySelector('ul').firstChild, document.body.querySelector('ul').lastChild);
+    </script>
+</body>
+
+</html>

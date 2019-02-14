@@ -78,3 +78,7 @@
 ### Домашнее задание и практика к уроку 26
 
 [Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework26)
+
+### Домашнее задание и практика к уроку 27
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework27)

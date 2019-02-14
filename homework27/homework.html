@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div id='elem1' class='llas one-two'>435</div>
+    <div id='elem2' class='llas one-two'>564</div>
+    <div id='elem' class='one-two-three llas'>546</div>
+    <div id='elem1' class='llas'>ytu</div>
+    <div id='elem2' class='llas'>24</div>
+    <div id='elem1' class='llas'>654</div>
+    <script type="text/javascript">
+        // 1
+        document.getElementById('elem').classList.add('www');
+        // 2
+        let node = document.getElementById('elem').classList;
+        if (node.contains('www')) node.remove('www');
+        // 3
+        const recursiveSearchTags = (source, tag) => Array.from(source.getElementsByTagName(tag));
+        // 4
+        const arrToList = (list, arr) => {
+            for (let i = 0; i < arr.length; i++) {
+                var newPoint = document.createElement('li');
+                newPoint.innerText = arr[i];
+                newPoint.setAttribute('onclick', `alert('${newPoint.innerText}')`)
+                list.appendChild(newPoint);
+            }
+        }
+        // arrToList(ul = document.createElement('ul'), [1,2,3,4,5,6]);
+        // document.body.insertBefore(ul, null);
+        // 5
+        document.getElementById('elem').previousElementSibling.innerText += '!';
+        // 6
+        document.body.append(document.createElement('input'), document.createElement('button'));
+        document.getElementsByTagName('button')[0].setAttribute('id', 'button');
+        let theButton = document.getElementById('button');
+        theButton.innerText = 'Кнопка';
+        theButton.setAttribute('onclick', `document.body.append(document.getElementsByTagName('input')[0].cloneNode(1))`)
+        // 7
+        const wrapInParagraph = () => recursiveSearchTags(document, 'div').map(el => (el.innerText.length > 0) ? el.innerHTML = `<p>${el.innerText}</p>` : el);
+        // 8
+        const normalizeClassName = str => {
+            let i;
+            while (str.includes('-')) {
+                i = str.indexOf('-');
+                str = str.slice(0, i) + str[i + 1].toUpperCase() + str.slice(i + 2);
+            }
+            return str;
+        }
+        const normalizeClassNames = () => {
+            let listOfNodes = document.querySelectorAll('*');
+            for (let i = 0; i < listOfNodes.length; i++) {
+                listOfNodes[i].className = normalizeClassName(listOfNodes[i].classList.value);
+                console.log(listOfNodes)
+            }
+        };
+    </script>
+</body>
+
+</html>
