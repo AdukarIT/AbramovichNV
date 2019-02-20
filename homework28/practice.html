@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/overcast/jquery-ui.css"
+  />
+  <script src='practice.js'></script>
+  <style>
+    svg {
+      position: absolute;
+    }
+    div {
+      height: 200px;
+      width: 200px;
+    }
+    #task2 {
+      background: burlywood;
+    }
+    .directory {
+      background: url(http://s1.iconbird.com/ico/0612/Aurora/w128h1281339789847icontextoaurorafoldersclose2.png) no-repeat;
+      background-size: contain;
+    }
+    .open-directory {
+      background-image: url(http://s1.iconbird.com/ico/0612/Aurora/w128h1281339789863icontextoaurorafoldersdocuments2.png);
+    }
+  </style>
+</head>
+
+<body>
+  <!--task1-->
+  <h3>task 1</h3>
+  <input>
+  <svg id="draggable" width="140" height="130">
+    <polygon points="70,5 90,41 136,48 103,80 111,126 70,105 29,126 36,80 5,48 48,41" fill="turquoise" stroke="lightseagreen"
+      stroke-width="5" />
+  </svg>
+  <p id="getX"></p>
+  <p id="getY"></p>
+  <!--task2-->
+  <h3>task 2</h3>
+  <div id="task2"></div>
+  <p id="task2X">X:</p>
+  <p id="task2Y">Y:</p>
+  <!--task3-->
+  <h3>task 3</h3>
+  <div class='directory'></div>
+  <!--task4-->
+  <h3>task 4</h3>
+  <a href="practice4task.html">here</a>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/overcast/jquery-ui.css"
+    />
+    <script>
+        $(document).ready(function () {
+            const createDiv = n => {
+                var color;
+                var colorString;
+                for (let i = 0; i < n; i++) {
+                    document.body.appendChild(document.createElement('div'));
+                    color = '#'+Math.floor(Math.random()*16777215).toString(16);
+                    document.body.lastElementChild.style.backgroundColor = color;
+                }
+            }
+            createDiv(400);
+            dirs = document.body.getElementsByTagName('div');
+            for (let i = 0; i < dirs.length; i++) {
+                dirs[i].onmouseover = function(e) {
+                    this.classList.add('circle');
+                }
+                dirs[i].onmouseout = function(e) {
+                    this.classList.remove('circle');
+                }
+            }
+        })
+    </script>
+    <style>
+        div {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            transition-duration: 0.1s;
+        }
+        .circle {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+
+</html>
