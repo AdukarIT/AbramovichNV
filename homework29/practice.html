@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Практика</title>
+    <style type="text/css">
+        div {
+            display: block;
+            height: 30px;
+            width: 150px;
+            background: linear-gradient(to right, blue 50%, transparent 50%);
+            transition: all 1s ease 0.1s;
+        }
+    </style>
+    <script src="practice.js"></script>
+</head>
+
+<body>
+    <form>
+        <select id='select'>
+            <option value="1" selected>1111</option>
+            <option value="2">2222</option>
+            <option value="3">3333</option>
+        </select>
+        <button id="button">Кнопка</button>
+    </form>
+    <h4>Калькулятор процентов</h4>
+    <form id='calc-form'>
+        <label for="sum">Сумма</label>
+        <input type="number" id="sum">
+        <br>
+        <label for="months">Срок в месяцах</label>
+        <select id="months">
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12">12(год)</option>
+            <option value="24">24(2 года)</option>
+        </select>
+        <br>
+        <label for="capital">С капитализацией</label>
+        <input type="checkbox" id="capital">
+        <br>
+        <br>
+        <output id='first' name="first-sum" for="sum">Было: 0</output>
+        <div></div>
+        <br>
+        <output id='last' name="last-sum" for="sum months capital">Стало: 0</output>
+        <div id='last_div'></div>
+    </form>
+    <br>
+
+    <!-- task 7 -->
+    <form id='reg'>
+        <label for="email">Email Address</label>
+        <input type="email" id="email">
+        <label for="password">Password</label>
+        <input type="password" id="password">
+        <button id="reg-button" type="submit">Create Account</button>
+    </form>
+</body>
+
+</html>

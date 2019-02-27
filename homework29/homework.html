@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ</title>
+    <style type="text/css">
+        div {
+            display: block;
+            height: 30px;
+            width: 150px;
+            background: linear-gradient(to right, blue 50%, transparent 50%);
+            transition: all 1s ease 0.1s;
+        }
+        .wrong_input {
+            border-color: rgba(255,0,0,0.5);
+        }
+    </style>
+    <script src="homework.js"></script>
+</head>
+
+<body>
+    <!-- task 1 -->
+    <form id="order-form">Имя:
+        <input type="text" id="name">
+        <br>Кол-во пончиков:
+        <input type="text" id="donuts">
+        <br>Минут:
+        <input type="text" id="minutes">
+        <br>Подитог:
+        <input type="text" id="poditog">
+        <br>Налог:
+        <input type="text" id="tax">
+        <br>Итог:
+        <input type="text" id="itog">
+        <br>
+        <input type="submit" value="заказать" onclick="placeOrder()">
+    </form>
+    <hr>
+    <!-- task 2 -->
+    <form id="send-mail" method="post" action="mailto:address@domen.domen">
+        <input type="text">
+        <button id="send-button">Отправить</button>
+        <button type="reset" id="clear-button">Очистить</button>
+    </form>
+    <!-- task 3-4 -->
+    <!-- <form id="valid-form">Имя:
+        <input type="text" id="valid-form_name">
+        <br>Кол-во пончиков:
+        <input type="text" id="valid-form_donuts">
+        <br>Минут:
+        <input type="text" id="valid-form_minutes">
+        <br>Подитог:
+        <input type="text" id="valid-form_poditog">
+        <br>Налог:
+        <input type="text" id="valid-form_tax">
+        <br>Итог:
+        <input type="text" id="valid-form_itog">
+        <br>
+        <input type="submit" value="заказать">
+    </form>  -->
+</body>
+
+</html>
