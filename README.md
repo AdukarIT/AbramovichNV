@@ -90,3 +90,7 @@
 ### Домашнее задание и практика к уроку 29
 
 [Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework29)
+
+### Домашнее задание и практика к уроку 30
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework30)

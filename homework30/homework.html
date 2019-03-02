@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ДЗ</title>
+    <style type="text/css">
+        div {
+            display: block;
+            height: 30px;
+            width: 150px;
+            background: linear-gradient(to right, blue 50%, transparent 50%);
+            transition: all 1s ease 0.1s;
+        }
+
+        .wrong_input {
+            border-color: rgba(255, 0, 0, 0.5);
+        }
+    </style>
+    <script src="homework.js"></script>
+</head>
+
+<body>
+    <!-- task 1 -->
+    <form id="remind-form">Напоминание:
+        <input type="text" id="remind" required>
+        <input type="time" id="time" required>
+        <input type="submit" id="submit" value="Напомнить">
+    </form>
+    <audio id="remind-audio" src="sound.mp3" type="audio/mp3"></audio>
+</body>
+
+</html>
