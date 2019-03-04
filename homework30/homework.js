@@ -68,16 +68,24 @@ class Burger {
 addEventListener('DOMContentLoaded', function () {
   var nowTime = new Date();
   document.getElementById('time').value = nowTime.toTimeString().slice(0, 5);
-  document.getElementById('remind-form').addEventListener('submit', (event) => {
+  document.getElementById('remind-form').addEventListener('submit', event => {
     event.preventDefault();
-    const func = () => {
+    var newScript = document.createElement("script");
+    newScript.classList.add("removing");
+    newScript.type = "text/javascript";
+    newScript.text = `
+    var nowTime = new Date();
+    var remind = '${document.getElementById('remind').value}';
+    var remindTime = '${document.getElementById('time').value}';
+    function func() {
       document.getElementById('remind-audio').play();
-      alert(document.getElementById('remind').value);
+      alert(remind);
     }
-    var remindTime = document.getElementById('time').value;
     var delay = (remindTime.slice(0, 2) - nowTime.toTimeString().slice(0, 2)) * 60 + (remindTime.slice(3) - nowTime.toTimeString().slice(3, 5));
-    console.log(delay);
     window.setTimeout(func, delay * 60 * 1000);
+    document.getElementsByClassName('removing')[0].remove();
+    `;
+    document.getElementsByTagName('head')[0].appendChild(newScript);
     return false;
   });
 })
