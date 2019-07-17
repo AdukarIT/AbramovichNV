@@ -5,17 +5,26 @@
     <meta charset="UTF-8">
     <title>ДЗ</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
     <style type="text/css">
-        p {
-            margin: 0;
+        fieldset label {
+            display: block;
+            margin: 5px 0;
         }
 
-        .title {
-            font-weight: 600;
+        fieldset input,
+        fieldset select {
+            width: 100%;
+            padding: 2px;
+            margin: 5px 0;
+        }
+
+        #table_id .ui-selected td {
+            background-color: gray;
         }
     </style>
     <script src="homework.js"></script>
@@ -36,6 +45,7 @@
     </table>
 
     <button id="create-statement">Create new statement</button>
+    <button id="remove-statement">Remove statement</button>
 
     <div id="dialog_form" title="Create new">
         <p class="validateTips">All form fields are required.</p>
@@ -43,9 +53,9 @@
         <form>
             <fieldset>
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
-                <label for="Phone">Phone</label>
-                <input type="text" name="phone" id="phone" value="+00000-000-00-00" class="text ui-widget-content ui-corner-all">
+                <input type="text" name="name" id="name" placeholder="Jane Smith" class="text ui-widget-content ui-corner-all">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" placeholder="+00000-000-00-00" class="text ui-widget-content ui-corner-all">
                 <label for="type">Type</label>
                 <select id="type">
                     <option value="question">question</option>
@@ -57,6 +67,13 @@
                 <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
             </fieldset>
         </form>
+    </div>
+
+    <div id="dialog_confirm" title="Are you sure?">
+        <p>
+            <span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
+            These items will be permanently deleted and cannot be recovered
+        </p>
     </div>
 </body>
 

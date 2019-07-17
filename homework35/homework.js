@@ -1,18 +1,39 @@
 $(document).ready(function () {
-    var dialog, form;
+    var dialogAdd, dialogConfirm, form;
     var table = $('#table_id').DataTable();
+    var name = $('#name');
+    var phone = $('#phone');
+    var type = $('#type');
+    var allFields = $([]).add(name).add(phone);
 
-    var name = $("#name")[0].value;
-    var phone = $("#phone")[0].value;
-    var type = $("#type")[0].value;
+    function checkRegexp(o, regexp) {
+        if (!(regexp.test(o.val()))) {
+            o.addClass("ui-state-error");
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     function addStatement() {
-        table.row.add([name, phone, new Date, type]).draw();
-        dialog.dialog("close");
+        var valid = true;
+        allFields.removeClass("ui-state-error");
+        valid = valid && checkRegexp(name, /^[a-z]([0-9a-z_\s])+$/i);
+        valid = valid && checkRegexp(phone, /(\+375)([0-9]{9})/);
+        if (valid) {
+            table.row.add([name.val(), phone.val(), new Date, type.val()]).draw();
+            dialogAdd.dialog("close");
+        }
         return;
     }
 
-    dialog = $("#dialog_form").dialog({
+    function removeStatement() {
+        $("tr.ui-selected").each(function(e) {
+            table.row(this).remove().draw();
+        });
+    }
+
+    dialogAdd = $("#dialog_form").dialog({
         autoOpen: false,
         height: 400,
         width: 350,
@@ -20,7 +41,7 @@ $(document).ready(function () {
         buttons: {
             "Create an account": addStatement,
             Cancel: function () {
-                dialog.dialog("close");
+                dialogAdd.dialog("close");
             }
         },
         close: function () {
@@ -28,12 +49,35 @@ $(document).ready(function () {
         }
     });
 
-    form = dialog.find("form").on("submit", function (event) {
+    dialogConfirm = $( "#dialog_confirm" ).dialog({
+        autoOpen: false,
+        resizable: false,
+        height: "auto",
+        width: 400,
+        modal: true,
+        buttons: {
+          "Delete all items": function() {
+            $( this ).dialog( "close" );
+            removeStatement()
+          },
+          Cancel: function() {
+            $( this ).dialog( "close" );
+          }
+        }
+      });
+
+    $('tbody').selectable();
+
+    form = dialogAdd.find("form").on("submit", function (event) {
         event.preventDefault();
         addStatement();
     });
 
     $("#create-statement").button().on("click", function () {
-        dialog.dialog("open");
+        dialogAdd.dialog("open");
+    });
+
+    $("#remove-statement").button().on("click", function () {
+        dialogConfirm.dialog("open");
     });
 });
