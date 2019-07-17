@@ -105,6 +105,10 @@
 [Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework34)
 [Задание](https://jsfiddle.net/wqvh2483/)
 
+### Домашнее задание к уроку 35
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework35)
+
 ### Проект2
 
 [Задание](https://github.com/Piratika/js_project)
