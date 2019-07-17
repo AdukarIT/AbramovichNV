@@ -94,3 +94,21 @@
 ### Домашнее задание и практика к уроку 30
 
 [Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework30)
+
+### Домашнее задание к уроку 33
+
+[Задание](https://jsfiddle.net/gcw2rmnf/3/)
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework33)
+
+### Домашнее задание к уроку 34
+
+[Задание](https://github.com/AdukarIT/AbramovichNV/tree/master/homework34)
+[Задание](https://jsfiddle.net/wqvh2483/)
+
+### Проект2
+
+[Задание](https://github.com/Piratika/js_project)
+
+### Проект3
+
+[Задание](https://github.com/Piratika/final_project)
